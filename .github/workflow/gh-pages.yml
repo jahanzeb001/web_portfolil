@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages  # Update this with your main branch name
+      - jahanzeb_dev  # Update this with your main branch name
 
 jobs:
   build:

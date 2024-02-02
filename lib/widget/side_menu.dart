@@ -110,6 +110,32 @@ class SideMenu extends StatelessWidget {
               padding: const EdgeInsets.only(left: 50, top: 20),
               child: MouseRegion(
                 onEnter: (val) {
+                  landingPageController.isPackageAppHover.value = true;
+                },
+                onExit: (val) {
+                  landingPageController.isPackageAppHover.value = false;
+                },
+                child: GestureDetector(
+                  onTap: () {
+                    landingPageController.selectedIndex.value = 2;
+                  },
+                  child: Text(
+                    "Packages",
+                    style: TextStyle(
+                        color: landingPageController.isPackageAppHover.value
+                            ? whiteColor
+                            : greyColor,
+                        fontFamily: "Ubuntu",
+                        fontWeight: FontWeight.w300,
+                        fontSize: 16),
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 50, top: 20),
+              child: MouseRegion(
+                onEnter: (val) {
                   landingPageController.isAboutAppHover.value = true;
                 },
                 onExit: (val) {
@@ -117,7 +143,7 @@ class SideMenu extends StatelessWidget {
                 },
                 child: GestureDetector(
                   onTap: () {
-                    landingPageController.selectedIndex.value = 2;
+                    landingPageController.selectedIndex.value = 3;
                   },
                   child: Text(
                     "About",

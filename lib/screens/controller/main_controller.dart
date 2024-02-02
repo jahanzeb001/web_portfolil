@@ -6,7 +6,7 @@ class MainController extends GetxController {
   RxBool isWebAppHover = false.obs;
   RxBool isAboutAppHover = false.obs;
   RxBool isArticlesAppHover = false.obs;
-
+  RxBool isPackageAppHover = false.obs;
   RxBool isInstagrameHover = false.obs;
   RxBool isTwitterHover = false.obs;
   RxBool isLinkedInHover = false.obs;

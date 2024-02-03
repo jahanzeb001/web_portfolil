@@ -73,9 +73,7 @@ class MobileScreen extends StatelessWidget {
                       onEnter: (val) {},
                       onExit: (val) {},
                       child: GestureDetector(
-                        onTap: () {
-                          
-                        },
+                        onTap: () {},
                         child: Text(
                           "Mobile Apps",
                           style: TextStyle(

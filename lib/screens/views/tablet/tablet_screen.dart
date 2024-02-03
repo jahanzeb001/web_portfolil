@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:my_portfilio/screens/component/global.dart';
 import 'package:my_portfilio/screens/controller/main_controller.dart';
 import 'package:my_portfilio/utils/colors.dart';
+import 'package:my_portfilio/utils/const.dart';
+import 'package:my_portfilio/utils/launch.dart';
 
 class TabletScreen extends StatelessWidget {
   const TabletScreen({super.key});
@@ -76,7 +78,9 @@ class TabletScreen extends StatelessWidget {
                                 appTitle: "CLOUD CAMPUS",
                                 description: "THE EDUCATION GENIUS",
                                 btnText: "CHECKOUT",
-                                onpreesed: () {},
+                                onpreesed: () {
+                                  openPlayStore(cloudeCampus);
+                                },
                                 bgColor: const Color.fromARGB(255, 10, 71, 13),
                               ),
                             ),
@@ -89,7 +93,9 @@ class TabletScreen extends StatelessWidget {
                                 description:
                                     "THE COMPLETE PROPERTY DEALING SOLUTION ",
                                 btnText: "CHECKOUT",
-                                onpreesed: () {},
+                                onpreesed: () {
+                                  openPlayStore(gulbergMarina);
+                                },
                                 bgColor: Colors.blue,
                               ),
                             ),
@@ -109,7 +115,9 @@ class TabletScreen extends StatelessWidget {
                                 description:
                                     "ADMIN APP FOR BOOK MAIDZ FOR YOUR HOME",
                                 btnText: "CHECKOUT",
-                                onpreesed: () {},
+                                onpreesed: () {
+                                  openPlayStore(goMaidzProvider);
+                                },
                                 bgColor: const Color.fromRGBO(147, 72, 104, 1),
                               ),
                             ),
@@ -136,7 +144,9 @@ class TabletScreen extends StatelessWidget {
                               description:
                                   "CONNECT YOUR ORDER TAKING <KITCHEN AND BILL COUNTER ",
                               btnText: "CHECKOUT",
-                              onpreesed: () {},
+                              onpreesed: () {
+                                openPlayStore(respoWaiter);
+                              },
                               bgColor: const Color.fromRGBO(240, 130, 0, 1),
                             ),
                           ),
@@ -148,7 +158,9 @@ class TabletScreen extends StatelessWidget {
                               appTitle: "GOMAIDS",
                               description: "BOOK MAIDZ FOR YOUR HOME",
                               btnText: "CHECKOUT",
-                              onpreesed: () {},
+                              onpreesed: () {
+                                openPlayStore(gomaidzTaker);
+                              },
                               bgColor: const Color.fromRGBO(25, 66, 148, 1),
                             ),
                           ),

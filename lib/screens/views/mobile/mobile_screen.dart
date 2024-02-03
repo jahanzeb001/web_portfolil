@@ -4,6 +4,7 @@ import 'package:my_portfilio/screens/component/global.dart';
 import 'package:my_portfilio/screens/controller/main_controller.dart';
 import 'package:my_portfilio/utils/colors.dart';
 import 'package:my_portfilio/utils/const.dart';
+import 'package:my_portfilio/utils/launch.dart';
 
 class MobileScreen extends StatelessWidget {
   MobileScreen({super.key});
@@ -72,7 +73,9 @@ class MobileScreen extends StatelessWidget {
                       onEnter: (val) {},
                       onExit: (val) {},
                       child: GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          
+                        },
                         child: Text(
                           "Mobile Apps",
                           style: TextStyle(
@@ -84,23 +87,50 @@ class MobileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Padding(
+                  //   padding: const EdgeInsets.only(left: 20, top: 20),
+                  //   child: MouseRegion(
+                  //     onEnter: (val) {
+                  //       mainController.isWebAppHover.value = true;
+                  //     },
+                  //     onExit: (val) {
+                  //       mainController.isWebAppHover.value = false;
+                  //     },
+                  //     child: GestureDetector(
+                  //       onTap: () {
+                  //         mainController.selectedIndex.value = 1;
+                  //       },
+                  //       child: Text(
+                  //         "Desktop & Web",
+                  //         style: TextStyle(
+                  //             color: mainController.isWebAppHover.value
+                  //                 ? whiteColor
+                  //                 : greyColor,
+                  //             fontFamily: "Ubuntu",
+                  //             fontWeight: FontWeight.w300,
+                  //             fontSize: 16),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
+
                   Padding(
                     padding: const EdgeInsets.only(left: 20, top: 20),
                     child: MouseRegion(
                       onEnter: (val) {
-                        mainController.isWebAppHover.value = true;
+                        mainController.isPackageAppHover.value = true;
                       },
                       onExit: (val) {
-                        mainController.isWebAppHover.value = false;
+                        mainController.isPackageAppHover.value = false;
                       },
                       child: GestureDetector(
                         onTap: () {
-                          mainController.selectedIndex.value = 1;
+                          mainController.selectedIndex.value = 0;
                         },
                         child: Text(
-                          "Desktop & Web",
+                          "Packages",
                           style: TextStyle(
-                              color: mainController.isWebAppHover.value
+                              color: mainController.isPackageAppHover.value
                                   ? whiteColor
                                   : greyColor,
                               fontFamily: "Ubuntu",
@@ -110,6 +140,7 @@ class MobileScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   Padding(
                     padding: const EdgeInsets.only(left: 20, top: 20),
                     child: MouseRegion(
@@ -121,7 +152,7 @@ class MobileScreen extends StatelessWidget {
                       },
                       child: GestureDetector(
                         onTap: () {
-                          mainController.selectedIndex.value = 2;
+                          mainController.selectedIndex.value = 1;
                         },
                         child: Text(
                           "About",
@@ -363,7 +394,9 @@ class MobileScreen extends StatelessWidget {
                   appTitle: "CLOUD CAMPUS",
                   description: "THE EDUCATION GENIUS",
                   btnText: "CHECKOUT",
-                  onpreesed: () {},
+                  onpreesed: () {
+                    openPlayStore(cloudeCampus);
+                  },
                   bgColor: const Color.fromARGB(255, 10, 71, 13),
                 ),
               ),
@@ -375,7 +408,9 @@ class MobileScreen extends StatelessWidget {
                   appTitle: "GULBERG MARINA",
                   description: "THE COMPLETE PROPERTY DEALING SOLUTION ",
                   btnText: "CHECKOUT",
-                  onpreesed: () {},
+                  onpreesed: () {
+                    openPlayStore(gulbergMarina);
+                  },
                   bgColor: Colors.blue,
                 ),
               ),
@@ -395,7 +430,9 @@ class MobileScreen extends StatelessWidget {
                   description:
                       "CONNECT YOUR ORDER TAKING <KITCHEN AND BILL COUNTER ",
                   btnText: "CHECKOUT",
-                  onpreesed: () {},
+                  onpreesed: () {
+                    openPlayStore(respoWaiter);
+                  },
                   bgColor: const Color.fromRGBO(240, 130, 0, 1),
                 ),
               ),
@@ -407,7 +444,9 @@ class MobileScreen extends StatelessWidget {
                   appTitle: "GOMAIDS",
                   description: "BOOK MAIDZ FOR YOUR HOME",
                   btnText: "CHECKOUT",
-                  onpreesed: () {},
+                  onpreesed: () {
+                    openPlayStore(gomaidzTaker);
+                  },
                   bgColor: const Color.fromRGBO(25, 66, 148, 1),
                 ),
               ),
@@ -426,7 +465,9 @@ class MobileScreen extends StatelessWidget {
                   appTitle: "GOMAIDS PRO",
                   description: "ADMIN APP FOR BOOK MAIDZ FOR YOUR HOME",
                   btnText: "CHECKOUT",
-                  onpreesed: () {},
+                  onpreesed: () {
+                    openPlayStore(goMaidzProvider);
+                  },
                   bgColor: const Color.fromRGBO(147, 72, 104, 1),
                 ),
               ),

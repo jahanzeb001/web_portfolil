@@ -80,32 +80,32 @@ class SideMenu extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 50, top: 20),
-              child: MouseRegion(
-                onEnter: (val) {
-                  landingPageController.isWebAppHover.value = true;
-                },
-                onExit: (val) {
-                  landingPageController.isWebAppHover.value = false;
-                },
-                child: GestureDetector(
-                  onTap: () {
-                    landingPageController.selectedIndex.value = 1;
-                  },
-                  child: Text(
-                    "Desktop & Web",
-                    style: TextStyle(
-                        color: landingPageController.isWebAppHover.value
-                            ? whiteColor
-                            : greyColor,
-                        fontFamily: "Ubuntu",
-                        fontWeight: FontWeight.w300,
-                        fontSize: 16),
-                  ),
-                ),
-              ),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.only(left: 50, top: 20),
+            //   child: MouseRegion(
+            //     onEnter: (val) {
+            //       landingPageController.isWebAppHover.value = true;
+            //     },
+            //     onExit: (val) {
+            //       landingPageController.isWebAppHover.value = false;
+            //     },
+            //     child: GestureDetector(
+            //       onTap: () {
+            //         landingPageController.selectedIndex.value = 1;
+            //       },
+            //       child: Text(
+            //         "Desktop & Web",
+            //         style: TextStyle(
+            //             color: landingPageController.isWebAppHover.value
+            //                 ? whiteColor
+            //                 : greyColor,
+            //             fontFamily: "Ubuntu",
+            //             fontWeight: FontWeight.w300,
+            //             fontSize: 16),
+            //       ),
+            //     ),
+            //   ),
+            // ),
             Padding(
               padding: const EdgeInsets.only(left: 50, top: 20),
               child: MouseRegion(
@@ -117,7 +117,7 @@ class SideMenu extends StatelessWidget {
                 },
                 child: GestureDetector(
                   onTap: () {
-                    landingPageController.selectedIndex.value = 2;
+                    landingPageController.selectedIndex.value = 1;
                   },
                   child: Text(
                     "Packages",
@@ -143,7 +143,7 @@ class SideMenu extends StatelessWidget {
                 },
                 child: GestureDetector(
                   onTap: () {
-                    landingPageController.selectedIndex.value = 3;
+                    landingPageController.selectedIndex.value = 2;
                   },
                   child: Text(
                     "About",
